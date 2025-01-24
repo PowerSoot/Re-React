@@ -1,0 +1,50 @@
+$font: "Demons";
+$font2: "Chavier";
+$font3: "Grave";
+$font4: "Merry";
+$font5: "Altron";
+
+@font-face {
+  font-family: "Demons";
+  src: url("fonts/OvermindDemons-GO10y.ttf");
+}
+
+@font-face {
+  font-family: "Chavier";
+  src: url("fonts/ChavlerExtruderightDemo-lxM9d.otf");
+}
+
+@font-face {
+  font-family: "Grave";
+  src: url("fonts/Gravedigger-8BOZ.ttf");
+}
+
+@font-face {
+  font-family: "Merry";
+  src: url("fonts/MerrysPersonalUse-KVM77.ttf");
+}
+
+@font-face {
+  font-family: "Altron";
+  src: url("fonts/AltronedtrialRegular-E4pYl.otf");
+}
+
+h1 {
+  font-family: $font;
+}
+
+h2 {
+  font-family: $font2;
+}
+
+h3 {
+  display: inline-block;
+  font-family: $font3;
+  color:rgb(253, 198, 126);
+  text-shadow: 1px 3px rgb(110, 71, 39);
+  padding: 1%;
+  box-shadow: 3px 0px red;
+  border-radius: 8px;
+  border: 3px solid yellowgreen;
+  background-image: linear-gradient(to left ,rgb(253, 0, 63), rgb(63, 0, 60), teal);
+}
