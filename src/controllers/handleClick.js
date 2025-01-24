@@ -1,3 +1,6 @@
+import { output } from "../utils/output";
+
 export default function handleClick() {
-  console.log('click');
+  debugger;
+  output("push the button!!!! ");
 }

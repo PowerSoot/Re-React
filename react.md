@@ -16,10 +16,22 @@
 
 > ![](images/slide1.png)
 >
-> - <font color="lightblue"> `react` The main react functions and classes
+> - <font color="lightblue">
+> - `react` The main react functions and classes.
+> - Contains the methods for converting HTML to JavaScript
 > - `react-dom` More functions and classes to use react
+> - Contains function for manipulating the dom.
+> - >   ::Babel replaces HTML with React object::
+> 
+> ### <ins> DOM= Document object model
+- Document Object Model
+- Represent HTML as a tree of objects
+- Represented by the document object
+- The function `creatRoot` is from react-dom
+- The function `creatRoot` manipulates the DOM.
+>![](images/slide2.png)
 
-> ![](images/slide2.png)
+> ![](images/slide13.png)
 
 > ### <font color="lightblue"> React Setup</font>
 
@@ -37,24 +49,23 @@ root.render(<h1>Hello World!"</h1>);
    - `defer` loads script after the HTML file has rendered all it's elements
 4. `creatRoot` needs an `HTML` element
 5. React renders HTML into the root
->![](images/slide3.png)
->![](images/slide4.png)
+   > ![](images/slide3.png) >![](images/slide4.png)
 
-### Babel
+### <ins>Babel<ins>
 
 - `HTML` is not valid javascript
 - `HTML` must be compiled or convereted to usable `JavaScript`
 - Babel is a `JavaScript` compiler
 - it can compile `HTML` into browser-compatible `JavaScript`
 - - Babel is also a node module
->- ![](/images/slide6.png)
+    > - ![](/images/slide6.png)
 
-### Compiling the `HTML` to `JavaScript`
+### <ins>Compiling the `HTML` to `JavaScript`<ins>
 
 - Copy the `HTML` and paste it into the Babel website
 - Copy compiled code into index.js
 
-### installing Babel
+### <ins>installing Babel<ins>
 
 > `npm install @babel/core @babel/cli @babel/preset-react`
 
@@ -62,9 +73,9 @@ root.render(<h1>Hello World!"</h1>);
 - `@babel/cli` A controller that allows babel to be used in the command line
 - `@babel/preset-react` - Provides instructions how to convert `HTML` to `JavaScript`
 
->![](images/slide7.png)
+> ![](images/slide7.png)
 
-> ### <font color="slate"> Babel command line</font>
+> ### <ins><font color="slate"> Babel command line<font>
 
 - `npx babel` The main command
 - ` ./src/index.js` Specifies the file to compile
@@ -77,7 +88,9 @@ root.render(<h1>Hello World!"</h1>);
 
 ### Babel configuraation file
 
-`babel.config.json`
+> ![](images/slide8.png)
+
+> ![](images/slide9.png) > `babel.config.json`
 
 ```json
 {
@@ -94,8 +107,66 @@ root.render(<h1>Hello World!"</h1>);
 3. Make changes, re-compile with Babel, and re-bundle with Webpack
 
 > ### <font color="slate">Webpack and Babel</font>
+>
+> ![](images/slide10.png)
 
 1. npm install babel-loader
 2. Use Webpack file structure and make changes
 3. npx webpack --module-rules-use babel-loader
 4. Render the React project in the browser
+
+> ![](images/slide11.png)
+
+- `babel-loader` nstructions about how to use Babel to compile
+- `--module-rules-use babel-loader` Tells Webpack to use those instructions
+
+> ![](images/slide12.png)
+
+### <ins>Configure Webpack to use Babel to compile
+
+1. Create `webpack.config.json`
+2. Add a JSON object corresponding to `--module-rules-use babel-loader`
+
+```json
+{
+  "module": {
+    "rules": [
+      {
+        "use": "babel-loader"
+      }
+    ]
+  }
+}
+```
+
+### <ins>Configure Webpack to watch for changes
+
+1. `npx webpack --watch`
+2. Press CRTL + C to exit Webpack
+
+```json
+{
+  "watch": true
+}
+```
+
+### <ins>Getting started with React
+
+```js
+<p> The Message is: {message}</p>
+```
+
+- Use curly braces to escape JavaScript
+- Extensions `.js` are not necassary for the import statement
+- Event handlers are callback functions (without parentheses)
+- The event variable is automatically passed to event handlers
+
+### Debugger modes
+
+`npx webpack --mode development`
+
+- By default, Webpack disables the debugger with production mode
+- To enable the debugger, set the mode to development
+
+1. Edit webpack.config.json
+2. Add "mode"

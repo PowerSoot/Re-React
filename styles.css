@@ -18,15 +18,21 @@
   font-family: "Altron";
   src: url("fonts/AltronedtrialRegular-E4pYl.otf");
 }
-h1 {
-  font-family: "Demons";
+h3 {
+  font-family: "Altron";
+  padding: 2%;
+  color: rgb(161, 6, 109);
+  text-shadow: 4px 2px rgb(69, 55, 156);
+  font-size: 34px;
+  background-color: black;
+  border: 2px solid rgb(214, 128, 96);
 }
 
 h2 {
   font-family: "Chavier";
 }
 
-h3 {
+h1 {
   display: inline-block;
   font-family: "Grave";
   color: rgb(253, 198, 126);
@@ -36,4 +42,19 @@ h3 {
   border-radius: 8px;
   border: 3px solid yellowgreen;
   background-image: linear-gradient(to left, rgb(253, 0, 63), rgb(63, 0, 60), teal);
+}
+
+p {
+  font-family: "Grave";
+  color: rgb(151, 138, 120);
+  text-shadow: 1px 3px rgb(126, 72, 27);
+  padding: 1%;
+  box-shadow: 3px 0px red;
+  border-radius: 4px;
+  border: 3px solid rgb(97, 50, 205);
+  background-image: linear-gradient(rgb(32, 29, 30), rgb(63, 0, 60), teal);
+}
+
+body {
+  background-color: rgba(31, 22, 22, 0.555);
 }/*# sourceMappingURL=styles.css.map */
