@@ -7,7 +7,7 @@
 > - `HTML` web pages are static- they don't change
 > - `JavaScript` web pages are dynamic - they can change
 
-> ### <font color="slate"> Installation</font>
+> ### <font color="black"> Installation</font>
 
 ```
 > npm init
@@ -21,19 +21,20 @@
 > - Contains the methods for converting HTML to JavaScript
 > - `react-dom` More functions and classes to use react
 > - Contains function for manipulating the dom.
-> - >   ::Babel replaces HTML with React object::
-> 
+> - > ::Babel replaces HTML with React object::
+>
 > ### <ins> DOM= Document object model
+
 - Document Object Model
 - Represent HTML as a tree of objects
 - Represented by the document object
 - The function `creatRoot` is from react-dom
 - The function `creatRoot` manipulates the DOM.
->![](images/slide2.png)
+  > ![](images/slide2.png)
 
 > ![](images/slide13.png)
 
-> ### <font color="lightblue"> React Setup</font>
+> ### <ins><font color="lightblue"> React Setup</font>
 
 ```js
 import { createRoot } from "react-dom/client";
@@ -120,9 +121,11 @@ root.render(<h1>Hello World!"</h1>);
 - `babel-loader` nstructions about how to use Babel to compile
 - `--module-rules-use babel-loader` Tells Webpack to use those instructions
 
-> ![](images/slide12.png)
+> -![](images/slide12.png)
 
 ### <ins>Configure Webpack to use Babel to compile
+
+> ![](images/slide14.png)
 
 1. Create `webpack.config.json`
 2. Add a JSON object corresponding to `--module-rules-use babel-loader`
@@ -138,6 +141,8 @@ root.render(<h1>Hello World!"</h1>);
   }
 }
 ```
+
+> -![](images/slide15.png)
 
 ### <ins>Configure Webpack to watch for changes
 
@@ -169,4 +174,105 @@ root.render(<h1>Hello World!"</h1>);
 - To enable the debugger, set the mode to development
 
 1. Edit webpack.config.json
-2. Add "mode"
+2. Add "mode": "development"
+
+```json
+{
+  "mode": "development"
+}
+```
+
+> ![](images/slide16.png)
+
+### <ins> iframe
+
+- Stands for inline frame
+- Embeds code from one website to the current website
+- An external webpage is directly displayed in the current page
+
+### <ins>camelCase properties
+
+- HTML properties must be in camelCase in React
+  > ![](images/slide17.png)
+
+### <ins>Reract inline styles
+
+- inline styles must be an object (not a string) in React
+
+1. Convert all the style string into an object
+2. Place quotes around CSS keywords and numbers with its
+
+### <ins>JSX
+
+- Stands for JavaScript XML
+- The syntax that looks like HTML, but JavaScript can be inserted into it
+  > ![](images/slide18.png)
+
+### Boolean attribute
+
+- The Boolean value must be escaped in React
+- A boolean value in quotes is invalid
+
+1. Convert the string to Boolean by escaping it
+
+### Editing the Twitch URL
+
+- Provide the parent or domain where the video is embedded
+- Example: localhost
+- Example: user.github.io
+
+###<ins> Embedding a local video
+
+1. Find a video from https://pexels.com/videos
+2. Create the folder` assets` next to src
+3. Download the video to the `assets` folder
+4. Set the src relative path and add `controls`
+
+### React components
+
+```js
+<MyGreeting>
+```
+
+- They are like custom HTML tags
+- They can contain or group together mutilple HTML tags
+- Can be created with a custom function
+- The name of the component must start with a capital letter
+
+###<ins> React function components
+
+- Created with a function that returns an HTML tag
+
+1. Create a `Views` folder in `src`
+2. Create a module called MyGreeting.js
+3. Let it export a function called MyGreeting
+4. Let it return a <section> with nested HTML tags
+5. mport and use it like a self closing tag
+
+###<ins> Variables vs State variables
+
+- Variables - contain values that aren't used for rendering
+- State variables - contain values that affect what is rendered
+
+###<ins> Rendering a variable
+
+1. Create a variable in MyGreeting and render it's value
+2. Change the value after 3 seconds with setTimeout
+3. Add a debugger in the callback to verify
+4. Check if the new value is rendered
+
+###<ins> useState
+
+- State vaiables are created by the function `useState`
+- eturns an array with 2 items
+- Position 0 is the value of the state variable
+- Posistion 1 is the setter, a function that sets the value of the state variable
+- The convention is to start it with set then the variable name
+
+###<ins> Rendering a state variable
+
+1. MyGreeting, create a state variable with `useState`
+2. Extract the array items that render the state variable value
+3. Change the value after 3 seconds with setTimeout and the setter
+4. Check if new value is rendered
+5. Check how many times setTimeout is called

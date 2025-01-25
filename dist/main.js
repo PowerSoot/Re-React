@@ -1599,6 +1599,35 @@ function handleSubmit(event = new Event()) {
 
 /***/ }),
 
+/***/ "./src/utils/Views/MyGreeting.js":
+/*!***************************************!*\
+  !*** ./src/utils/Views/MyGreeting.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MyGreeting: () => (/* binding */ MyGreeting)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function MyGreeting() {
+  // let greeting = "hello worlds!";
+  const myArray = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("The time has come to");
+  const greeting = myArray[0];
+  const setGreeting = myArray[1];
+  setTimeout(changeGreeting, 3000);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "My Greeting"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, greeting));
+  function changeGreeting() {
+    debugger;
+    // greeting = "goodbye world!";
+    setGreeting("GALVANiZE");
+  }
+}
+
+/***/ }),
+
 /***/ "./src/utils/output.js":
 /*!*****************************!*\
   !*** ./src/utils/output.js ***!
@@ -1707,23 +1736,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _controllers_handleClick__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controllers/handleClick */ "./src/controllers/handleClick.js");
 /* harmony import */ var _controllers_handleSubmit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./controllers/handleSubmit */ "./src/controllers/handleSubmit.js");
+/* harmony import */ var _utils_Views_MyGreeting__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/Views/MyGreeting */ "./src/utils/Views/MyGreeting.js");
+
 
 
 
 
 const message = "The command line is so easy now!";
 const root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(window.bodyTag);
-root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", null, "React is AWESOME\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h3", null, "React Programming"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", {
-  onClick: _controllers_handleClick__WEBPACK_IMPORTED_MODULE_2__["default"]
-}, "Click"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("output", {
-  id: "outputTag"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("form", {
+root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", null, "React is AWESOME\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", null, "React Programming"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_utils_Views_MyGreeting__WEBPACK_IMPORTED_MODULE_4__.MyGreeting, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("form", {
   onSubmit: _controllers_handleSubmit__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", {
   type: "text"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", {
   type: "submit"
-}))));
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  class: "container"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  class: "row"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  class: "col radius bg bg-black p-3 border border-white"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("iframe", {
+  width: "560",
+  height: "315",
+  src: "https://www.youtube.com/embed/rB9SaTnh41M?si=GeGmi3yV7IKCnElY",
+  title: "YouTube video player",
+  frameBorder: "0",
+  allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+  referrerPolicy: "strict-origin-when-cross-origin",
+  allowFullScreen: true
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  class: "col radius bg bg-black p-3 border border-white"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  style: {
+    padding: "0 0 0 0",
+    position: "relative"
+  }
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("iframe", {
+  src: "https://player.vimeo.com/video/51467582?badge=0&autopause=0&player_id=0&app_id=58479",
+  frameBorder: "0",
+  allow: "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media",
+  style: {
+    position: "relative",
+    top: 0,
+    left: 0,
+    width: "560px",
+    height: "315px"
+  }
+}, "title=\"Creamfields Chile 2012\"")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
+  src: "https://player.vimeo.com/api/player.js"
+}))))));
 })();
 
 /******/ })()

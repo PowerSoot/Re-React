@@ -21,10 +21,10 @@
 h3 {
   font-family: "Altron";
   padding: 2%;
-  color: rgb(161, 6, 109);
-  text-shadow: 4px 2px rgb(69, 55, 156);
+  color: rgb(228, 80, 178);
+  text-shadow: 4px 2px rgb(80, 72, 136);
   font-size: 34px;
-  background-color: black;
+  background-color: rgb(49, 18, 122);
   border: 2px solid rgb(214, 128, 96);
 }
 
@@ -45,16 +45,43 @@ h1 {
 }
 
 p {
-  font-family: "Grave";
-  color: rgb(151, 138, 120);
-  text-shadow: 1px 3px rgb(126, 72, 27);
-  padding: 1%;
-  box-shadow: 3px 0px red;
-  border-radius: 4px;
-  border: 3px solid rgb(97, 50, 205);
-  background-image: linear-gradient(rgb(32, 29, 30), rgb(63, 0, 60), teal);
+  color: aliceblue;
 }
 
 body {
-  background-color: rgba(31, 22, 22, 0.555);
+  background-color: rgba(10, 6, 15, 0.623);
+}
+
+button:hover, input:hover, h1:hover, h2:hover, h3:hover, p:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+button {
+  font-family: "Altron";
+  font-size: 35px;
+  color: rgb(9, 20, 17);
+  text-shadow: 1px 3px rgb(221, 197, 88);
+  padding: 1% 2%;
+  box-shadow: 3px 0px red;
+  border-radius: 8px;
+  border: 3px solid rgb(187, 50, 205);
+  background-image: linear-gradient(rgb(170, 118, 131), rgb(81, 235, 20), rgb(202, 167, 12));
+}
+
+input {
+  font-family: "Altron";
+  font-size: 25px;
+  color: rgb(9, 20, 17);
+  text-shadow: 1px 3px rgb(221, 197, 88);
+  padding: 1% 2%;
+  margin: 1%;
+  box-shadow: 3px 0px red;
+  border-radius: 8px;
+  border: 7px solid rgb(14, 121, 33);
+  background-image: linear-gradient(rgb(170, 118, 131), rgba(81, 235, 20, 0.534), rgb(202, 167, 12));
+}
+
+.radius {
+  border-radius: 8px;
 }/*# sourceMappingURL=styles.css.map */
